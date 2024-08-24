@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: go-app
+    ports:
+      - "8080:8080"
+    networks:
+      - go-network
+
+networks:
+  go-network:
+    driver: bridge
